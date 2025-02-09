@@ -5,14 +5,14 @@ pub const Node = struct {
     next: ?*Node,
 };
 
-pub fn insertAtBegin(head: ?*Node, data: i32, allocator: *std.mem.Allocator) !?*Node {
+pub fn insertAtBegin(head: ?*Node, data: i32, allocator: std.mem.Allocator) !?*Node {
     const newNode = try allocator.create(Node);
     newNode.data = data;
     newNode.next = head;
     return newNode;
 }
 
-pub fn insertAtEnd(head: ?*Node, data: i32, allocator: *std.mem.Allocator) !void {
+pub fn insertAtEnd(head: ?*Node, data: i32, allocator: std.mem.Allocator) !void {
     const newNode = try allocator.create(Node);
     newNode.data = data;
     newNode.next = null;
@@ -28,7 +28,7 @@ pub fn insertAtEnd(head: ?*Node, data: i32, allocator: *std.mem.Allocator) !void
     last.next = newNode;
 }
 
-pub fn deleteNode(head: ?*Node, data: i32, allocator: *std.mem.Allocator) !?*Node {
+pub fn deleteNode(head: ?*Node, data: i32, allocator: std.mem.Allocator) !?*Node {
     var current: ?*Node = head;
     var prev: ?*Node = null;
 
@@ -74,7 +74,7 @@ pub fn printList(head: ?*Node) void {
     std.debug.print("null\n", .{});
 }
 
-pub fn dealocateList(head: ?*Node, allocator: *std.mem.Allocator) void {
+pub fn dealocateList(head: ?*Node, allocator: std.mem.Allocator) void {
     var current: ?*Node = head;
     while (current != null) {
         const next = current.?.next;
@@ -88,17 +88,17 @@ pub fn main() !void {
     const allocator = gpa.allocator();
 
     var head: ?*Node = null;
-    head = try insertAtBegin(head, 30, &allocator);
-    head = try insertAtBegin(head, 20, &allocator);
-    head = try insertAtBegin(head, 10, &allocator);
+    head = try insertAtBegin(head, 30, allocator);
+    head = try insertAtBegin(head, 20, allocator);
+    head = try insertAtBegin(head, 10, allocator);
 
-    try insertAtEnd(head, 40, &allocator);
-    try insertAtEnd(head, 50, &allocator);
+    try insertAtEnd(head, 40, allocator);
+    try insertAtEnd(head, 50, allocator);
 
     std.debug.print("Linked list: ", .{});
     printList(head);
 
-    head = try deleteNode(head, 40, &allocator);
+    head = try deleteNode(head, 40, allocator);
     std.debug.print("Linked list: ", .{});
     printList(head);
 
@@ -109,5 +109,5 @@ pub fn main() !void {
         std.debug.print("4 not found in the list\n", .{});
     }
 
-    dealocateList(head, &allocator);
+    dealocateList(head, allocator);
 }
