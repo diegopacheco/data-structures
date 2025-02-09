@@ -3,5 +3,8 @@
         "*.julia": "julia",
         "stdlib.h": "c",
         "iostream": "cpp"
+    },
+    "files.watcherExclude": {
+        "**/target": true
     }
 }

@@ -1,0 +1,20 @@
+{
+  "name": "scala-cli",
+  "argv": [
+    "/home/diego/.sdkman/candidates/scala/current/bin/scala-cli",
+    "bsp",
+    "--json-options",
+    "/mnt/e35d88d4-42b9-49ea-bf29-c4c3b018d429/diego/git/diegopacheco/data-structures/.scala-build/ide-options-v2.json",
+    "--json-launcher-options",
+    "/mnt/e35d88d4-42b9-49ea-bf29-c4c3b018d429/diego/git/diegopacheco/data-structures/.scala-build/ide-launcher-options.json",
+    "--envs-file",
+    "/mnt/e35d88d4-42b9-49ea-bf29-c4c3b018d429/diego/git/diegopacheco/data-structures/.scala-build/ide-envs.json",
+    "/mnt/e35d88d4-42b9-49ea-bf29-c4c3b018d429/diego/git/diegopacheco/data-structures"
+  ],
+  "version": "1.4.3",
+  "bspVersion": "2.1.1",
+  "languages": [
+    "scala",
+    "java"
+  ]
+}
