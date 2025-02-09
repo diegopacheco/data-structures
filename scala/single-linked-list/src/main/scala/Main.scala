@@ -1,8 +1,6 @@
-object Main {
+case class Node(var data: Int, var next: Node = null)
 
-  class Node(var data: Int, var next: Node = null)
-
-  class LinkedList {
+class LinkedList {
     var head: Node = null
 
     def insertAtBegin(data: Int): Unit = {
@@ -61,7 +59,9 @@ object Main {
       }
       println()
     }
-  }
+}
+
+object Main {
 
   def main(args: Array[String]): Unit = {
     val list = new LinkedList()
