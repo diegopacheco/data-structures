@@ -33,8 +33,8 @@ impl LinkedList {
             }
             Some(head) => {
                 let mut current = head;
-                while let Some(node) = &mut current.next {
-                    current = node;
+                while current.next.is_some() {
+                    current = current.next.as_mut().unwrap();
                 }
                 current.next = Some(new_node);
             }
@@ -51,12 +51,12 @@ impl LinkedList {
                 }
 
                 let mut current = head;
-                while let Some(node) = &mut current.next {
-                    if node.data == data {
-                        current.next = node.next.take();
+                while current.next.is_some() {
+                    if current.next.as_ref().unwrap().data == data {
+                        current.next = current.next.take().unwrap().next;
                         return;
                     }
-                    current = node;
+                    current = current.next.as_mut().unwrap();
                 }
             }
         }
