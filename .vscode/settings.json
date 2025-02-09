@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "*.julia": "julia",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "iostream": "cpp"
     }
 }
