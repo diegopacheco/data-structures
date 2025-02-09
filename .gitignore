@@ -1,3 +1,7 @@
+.zig-cache
+.zig-cache/
+.zig-cache/*
+
 # Compiled class file
 *.class
 
