@@ -9,4 +9,5 @@ Data Structures implemented in various languages.
 ## Languages
 
 * C
+* C++
 * Zig
