@@ -15,3 +15,5 @@ Data Structures implemented in various languages.
 * Rust
 * Kotlin
 * Javascript
+* Typescript
+* Python
