@@ -14,3 +14,4 @@ Data Structures implemented in various languages.
 * Scala
 * Rust
 * Kotlin
+* Javascript
