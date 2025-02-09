@@ -5,6 +5,7 @@
 
 # Scala 3x vscode
 .scala-build 
+.scala-build/
 .scala-build/*
 
 # Compiled class file
