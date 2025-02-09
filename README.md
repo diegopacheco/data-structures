@@ -12,3 +12,4 @@ Data Structures implemented in various languages.
 * C++
 * Zig
 * Scala
+* Rust
