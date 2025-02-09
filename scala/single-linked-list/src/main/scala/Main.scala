@@ -1,9 +1,8 @@
-import LinkedList;
+import SingleLinkedList._
 
 object Main {
-
   def main(args: Array[String]): Unit = {
-    val list = new LinkedList()
+    val list = new SingleLinkedList()
 
     list.insertAtBegin(30)
     list.insertAtBegin(20)

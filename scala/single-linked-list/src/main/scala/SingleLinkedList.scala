@@ -1,6 +1,7 @@
-case class Node(var data: Int, var next: Node = null)
+object SingleLinkedList {
+  case class Node(var data: Int, var next: Node = null)
 
-class LinkedList {
+  class SingleLinkedList {
     var head: Node = null
 
     def insertAtBegin(data: Int): Unit = {
@@ -52,9 +53,10 @@ class LinkedList {
     def printList(): Unit = {
       var current = head
       while (current != null) {
-        print(current.data + " ")
+        print(s"${current.data} ")
         current = current.next
       }
       println()
     }
+  }
 }
