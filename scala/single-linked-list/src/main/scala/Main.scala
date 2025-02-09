@@ -24,7 +24,6 @@ class LinkedList {
 
     def deleteNode(data: Int): Unit = {
       if (head == null) return
-
       if (head.data == data) {
         head = head.next
         return
@@ -34,7 +33,6 @@ class LinkedList {
       while (current.next != null && current.next.data != data) {
         current = current.next
       }
-
       if (current.next != null) {
         current.next = current.next.next
       }
