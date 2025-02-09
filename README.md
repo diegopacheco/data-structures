@@ -11,3 +11,4 @@ Data Structures implemented in various languages.
 * C
 * C++
 * Zig
+* Scala
