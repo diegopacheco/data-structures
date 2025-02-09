@@ -1,4 +1,4 @@
 #!/bin/bash
 
 mkdir target/
-gcc *.c -o target/main
+gcc main.c list.c -o target/main
