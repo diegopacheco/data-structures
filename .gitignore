@@ -1,6 +1,11 @@
+# Zig
 .zig-cache
 .zig-cache/
 .zig-cache/*
+
+# Scala 3x vscode
+.scala-build 
+.scala-build/*
 
 # Compiled class file
 *.class
