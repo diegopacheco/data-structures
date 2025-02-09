@@ -7,6 +7,9 @@
 .scala-build 
 .scala-build/
 .scala-build/*
+.metals
+.metals/
+.metals/*
 
 # Compiled class file
 *.class
