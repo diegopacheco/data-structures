@@ -39,8 +39,9 @@ void insertAtEnd(Node **head, int data){
   temp->next = newNode;
 }
 
-void delete(Node **head, int data){
+void deleteNode(Node **head, int data){
   Node *temp = *head, *prev = NULL;
+
   if (temp != NULL && temp->data == data){
     *head = temp->next;
     free(temp);
@@ -51,7 +52,8 @@ void delete(Node **head, int data){
     prev = temp;
     temp = temp->next;
   }
-  if (NULL==temp) return;
+
+  if (temp == NULL) return;
   prev->next = temp->next;
   free(temp);
 }
@@ -62,6 +64,7 @@ Node *search(Node *head, int data){
     if (cur->data==data){
       return cur;
     }
+    cur = cur->next;
   }
   return NULL;
 }
@@ -93,7 +96,7 @@ int main(){
   insertAtEnd(&head, 50);
   print(head);
 
-  delete(&head, 40);
+  deleteNode(&head, 40);
   print(head);
 
   Node* res = search(head, 4);
