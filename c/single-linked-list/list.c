@@ -74,12 +74,13 @@ void print(Node *node){
     printf("\n");
 }
 
-void freeList(Node *head){
-    Node *cur = head;
+void freeList(Node **head){
+    Node *cur = *head;
     Node *next;
     while (NULL != cur){
         next = cur->next;
         free(cur);
         cur = next;
     }
+    *head = NULL;
 }
