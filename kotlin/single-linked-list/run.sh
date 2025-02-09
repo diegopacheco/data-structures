@@ -1,4 +1,4 @@
-
 #!/bin/bash
-./mvnw exec:java -Dexec.mainClass="Main" -Dexec.classpathScope=runtime
 
+./mvnw install
+./mvnw exec:java -Dexec.mainClass="Main" -Dexec.classpathScope=runtime
