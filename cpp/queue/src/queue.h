@@ -3,17 +3,17 @@
 
 #include <optional>
 #include <vector>
-#include <type_traits>
+#include <concepts>
 
 template<typename T>
-requires std::is_move_constructible<T>::value
+requires std::movable<T>
 class Queue {
 private:
     std::vector<T> items;
     size_t capacity;
 
 public:
-    explicit Queue(size_t max_size = 5);
+    explicit Queue(size_t max_size);
     
     void enqueue(T value);
     std::optional<T> dequeue();
@@ -29,5 +29,3 @@ public:
     Queue(Queue&&) noexcept = default;
     Queue& operator=(Queue&&) noexcept = default;
 };
-
-#endif
