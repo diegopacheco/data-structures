@@ -6,6 +6,7 @@ Data Structures implemented in various languages.
 
 * Single Linked List
 * Stack
+* Queue
 
 ## Languages
 
