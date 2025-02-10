@@ -19,3 +19,4 @@ Data Structures implemented in various languages.
 * Javascript
 * Typescript
 * Python
+* Haskell
