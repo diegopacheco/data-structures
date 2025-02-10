@@ -2,7 +2,20 @@
     "files.associations": {
         "*.julia": "julia",
         "stdlib.h": "c",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "optional": "cpp",
+        "vector": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "*.tcc": "cpp",
+        "ratio": "cpp",
+        "system_error": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp"
     },
     "files.watcherExclude": {
         "**/target": true
