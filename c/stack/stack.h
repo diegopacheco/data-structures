@@ -16,5 +16,6 @@ bool isFull(Stack* stack);
 void push(Stack* stack, int data);
 int pop(Stack* stack);
 int peek(Stack* stack);
+void printStack(Stack* stack);
 
 #endif

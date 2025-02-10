@@ -10,6 +10,8 @@ int main(){
   push(&s, 100);
   push(&s, 200);
   push(&s, 300);
+
+  printStack(&s);
   fprintf(stdout, "Top: %d\n", peek(&s));
   fprintf(stdout, "Pop: %d\n", pop(&s));
   fprintf(stdout, "Pop: %d\n", pop(&s));
@@ -19,5 +21,7 @@ int main(){
   } else {
       fprintf(stdout, "Stack is not empty\n");
   }
+
+  printStack(&s);
   return 0;
 }

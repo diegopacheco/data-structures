@@ -38,3 +38,14 @@ int peek(Stack* stack){
     }
     return stack->arr[stack->top];
 }
+
+void printStack(Stack* stack){
+    if (isEmpty(stack)){
+        fprintf(stdout, "Stack is empty\n");
+        return;
+    }
+    for (int i = 0; i <= stack->top; i++){
+        fprintf(stdout, "%d ", stack->arr[i]);
+    }
+    fprintf(stdout, "\n");
+}
