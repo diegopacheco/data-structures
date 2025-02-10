@@ -5,6 +5,7 @@ Data Structures implemented in various languages.
 ## Data Structures
 
 * Single Linked List
+* Stack
 
 ## Languages
 

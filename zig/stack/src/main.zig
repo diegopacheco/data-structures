@@ -21,4 +21,5 @@ pub fn main() !void {
         std.debug.print("Stack is not empty.\n", .{});
     }
     stack.printStack();
+    stack.deinit();
 }

@@ -53,6 +53,13 @@ pub fn Stack(comptime T: type, comptime capacity: usize) type {
             }
             std.debug.print("]\n", .{});
         }
+
+        pub fn deinit(self: *Self) void {
+            self.top = 0;
+            for (self.items[0..capacity]) |*item| {
+                item.* = undefined;
+            }
+        }
     };
 }
 
