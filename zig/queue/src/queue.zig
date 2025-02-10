@@ -13,21 +13,21 @@ pub fn Queue(comptime T: type, comptime capacity: usize) type {
             return Self{
                 .items = undefined,
                 .front = 0,
-                .rear = -1,
+                .rear = 0,
                 .size = 0,
             };
         }
 
-        pub fn enqueue(self: *const Self, item: T) !void {
+        pub fn enqueue(self: *Self, item: T) !void {
             if (self.isFull()) {
                 return error.QueueOverflow;
             }
-            self.rear = (self.rear + 1) % capacity;
             self.items[self.rear] = item;
+            self.rear = (self.rear + 1) % capacity;
             self.size += 1;
         }
 
-        pub fn dequeue(self: *const Self) !T {
+        pub fn dequeue(self: *Self) !T {
             if (self.isEmpty()) {
                 return error.QueueUnderflow;
             }
@@ -65,9 +65,9 @@ pub fn Queue(comptime T: type, comptime capacity: usize) type {
             std.debug.print("]\n", .{});
         }
 
-        pub fn deinit(self: *const Self) void {
+        pub fn deinit(self: *Self) void {
             self.front = 0;
-            self.rear = -1;
+            self.rear = 0;
             self.size = 0;
             for (self.items[0..capacity]) |*item| {
                 item.* = undefined;
