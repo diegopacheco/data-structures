@@ -29,3 +29,5 @@ public:
     Queue(Queue&&) noexcept = default;
     Queue& operator=(Queue&&) noexcept = default;
 };
+
+#endif // QUEUE_H
