@@ -61,7 +61,8 @@
         "thread": "cpp",
         "cinttypes": "cpp",
         "typeinfo": "cpp",
-        "hashtable.h": "c"
+        "hashtable.h": "c",
+        "list": "c"
     },
     "files.watcherExclude": {
         "**/target": true
