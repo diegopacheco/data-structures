@@ -3,7 +3,10 @@
 
 #include <stdbool.h>
 
+//
 // should be more, ideally prime but for easy print keep it low.
+// https://planetmath.org/goodhashtableprimes
+//
 #define TABLE_SIZE 10
 
 typedef struct Node {

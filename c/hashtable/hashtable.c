@@ -3,6 +3,13 @@
 #include "hashtable.h"
 
 int hash(int key) {
+    //
+    // has impl it self should be better
+    // but for simplicity we will use abs
+    // abs is not a good hash function
+    // a good hash function should be fast and
+    // should distribute keys uniformly
+    //
     return abs(key) % TABLE_SIZE;
 }
 
