@@ -8,6 +8,7 @@ Data Structures implemented in various languages.
 * Stack
 * Queue
 * Hash Table
+* Binary Search Tree (BST)
 
 ## Languages
 
