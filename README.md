@@ -2,15 +2,16 @@
 
 Data Structures implemented in various languages.
 
-## Data Structures
+## Data Structures Available
 
 * Single Linked List
 * Stack
 * Queue
 * Hash Table
 * Binary Search Tree (BST)
+* Min Heap
 
-## Languages
+## Implemented in Language
 
 * C
 * C++
