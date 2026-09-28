@@ -505,3 +505,9 @@ build-*/
 docgen_tmp/
 
 # End of https://www.toptal.com/developers/gitignore/api/c,c++,zig,rust,node,go,kotlin,clojure,python
+.gradle/
+.bsp/
+.bloop/
+.stack-work/
+*.hi
+.DS_Store
